@@ -8,7 +8,8 @@
     tools:context=".SplashActivity"
     android:background="@color/principal"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/splashScreen">
     
     <EditText
         android:layout_width="255dp"
