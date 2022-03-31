@@ -10,26 +10,26 @@
     android:orientation="vertical"
     android:gravity="center"
     android:id="@+id/splashScreen">
-    
+
     <EditText
-        android:layout_width="255dp"
+        android:layout_width="317dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="64dp"
         android:background="@color/principal_dark"
-        android:text="@string/jogo_da_velha"
         android:gravity="center"
+        android:text="@string/jogo_da_velha"
         android:textSize="24dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="64dp"/>
-    
-    <ImageView
-        android:layout_width="204dp"
-        android:layout_height="225dp"
-        android:src="@drawable/icon"
-        android:layout_marginBottom="96dp"/>
+        android:textStyle="bold" />
 
     <ImageView
-        android:layout_width="204dp"
-        android:layout_height="40dp"
-        android:src="@drawable/footer"/>
+        android:layout_width="307dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="96dp"
+        android:src="@drawable/icon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/footer" />
 
 </LinearLayout>
