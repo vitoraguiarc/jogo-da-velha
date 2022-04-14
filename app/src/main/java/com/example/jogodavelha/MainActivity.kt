@@ -21,6 +21,15 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        val maquinaX = findViewById<TextView>(R.id.maquinax)
+
+        maquinaX.setOnClickListener {
+
+            val intent = Intent (this, DificuldadeActivity::class.java)
+
+            startActivity(intent)
+        }
+
 
 
     }

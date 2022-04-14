@@ -10,6 +10,7 @@
     android:gravity="center"
     android:background="@color/principal">
 
+
     <TextView
         android:layout_width="330dp"
         android:layout_height="40dp"

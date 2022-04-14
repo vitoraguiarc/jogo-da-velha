@@ -21,18 +21,21 @@
         android:layout_marginBottom="100dp"/>
     
     <ImageView
+        android:id="@+id/facil"
         android:layout_width="240dp"
         android:layout_height="70dp"
         android:src="@drawable/facil"
         android:layout_marginBottom="30dp"/>
 
     <ImageView
+        android:id="@+id/medio"
         android:layout_width="240dp"
         android:layout_height="70dp"
         android:src="@drawable/intermediario"
         android:layout_marginBottom="30dp"/>
 
     <ImageView
+        android:id="@+id/dificil"
         android:layout_width="240dp"
         android:layout_height="70dp"
         android:src="@drawable/dificil"/>

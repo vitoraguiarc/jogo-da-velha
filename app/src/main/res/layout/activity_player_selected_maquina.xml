@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashVitoriaActivity"
+    tools:context=".SelecaoGonActivity"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/principal">
 
     <TextView
-        android:layout_width="330dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Personagem selecionado:"
         android:textColor="@color/white"
@@ -21,17 +21,17 @@
         android:layout_marginBottom="15dp"/>
 
     <ImageView
+        android:id="@+id/selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/gonselect"
-        android:layout_marginBottom="55dp"/>
+        android:layout_marginBottom="45dp"/>
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="35dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -39,22 +39,28 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp">
 
-            <ImageButton
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@color/principal"/>
-
-            <ImageButton
+            <Button
+                android:id="@+id/quadrado1"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@color/principal"
-                android:layout_marginLeft="15dp"/>
+                android:onClick="btnClick" />
 
-            <ImageButton
+            <Button
+                android:id="@+id/quadrado2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
                 android:background="@color/principal"
-                android:layout_marginLeft="15dp"/>
+                android:onClick="btnClick" />
+
+            <Button
+                android:id="@+id/quadrado3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/principal"
+                android:onClick="btnClick" />
 
         </LinearLayout>
 
@@ -63,22 +69,28 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp">
 
-            <ImageButton
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@color/principal"/>
-
-            <ImageButton
+            <Button
+                android:id="@+id/quadrado4"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@color/principal"
-                android:layout_marginLeft="15dp"/>
+                android:onClick="btnClick" />
 
-            <ImageButton
+            <Button
+                android:id="@+id/quadrado5"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
                 android:background="@color/principal"
-                android:layout_marginLeft="15dp"/>
+                android:onClick="btnClick" />
+
+            <Button
+                android:id="@+id/quadrado6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/principal"
+                android:onClick="btnClick" />
 
         </LinearLayout>
 
@@ -86,45 +98,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@color/principal"/>
-
-            <ImageButton
+            <Button
+                android:id="@+id/quadrado7"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@color/principal"
-                android:layout_marginLeft="15dp"/>
+                android:onClick="btnClick" />
 
-            <ImageButton
+            <Button
+                android:id="@+id/quadrado8"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
                 android:background="@color/principal"
-                android:layout_marginLeft="15dp"/>
+                android:onClick="btnClick" />
+
+            <Button
+                android:id="@+id/quadrado9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/principal"
+                android:onClick="btnClick" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <ImageButton
+        <TextView
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/killselect"
-            android:background="@color/principal"
-            android:layout_marginRight="25dp"/>
-
-        <ImageButton
+            android:text="TURNO:"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/jogador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/gonselect"
-            android:background="@color/principal"/>
+            />
 
     </LinearLayout>
+
+
+
+
+
 
 </LinearLayout>

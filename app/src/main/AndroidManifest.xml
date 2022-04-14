@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".PlayerSelectedMaquina"
+            android:exported="false" />
+        <activity
+            android:name=".SelecaoXMaquina"
+            android:exported="false" />
+        <activity
             android:name=".EmpateActivity"
             android:exported="false" />
         <activity
@@ -44,8 +50,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

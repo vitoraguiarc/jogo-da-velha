@@ -11,10 +11,11 @@
     android:background="@color/principal">
 
     <TextView
+        android:id="@+id/vitorioso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="VENCEDOR"
+
         android:textColor="@color/white"
         android:textSize="38sp"
         android:textStyle="bold"
@@ -22,12 +23,13 @@
 
 
     <ImageView
+        android:id="@+id/imgVitorioso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/gonwinner"
         android:layout_marginBottom="70dp"/>
 
     <Button
+        android:id="@+id/jogarNovamente"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Jogar Novamente"

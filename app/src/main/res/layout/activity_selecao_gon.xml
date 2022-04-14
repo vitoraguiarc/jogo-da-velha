@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:text="TURNO:"
             android:textSize="26sp"
-            android:textStyle="italic"/>
+            android:textStyle="bold"/>
         <ImageView
             android:id="@+id/jogador"
             android:layout_width="wrap_content"

@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
-var jogador = 0
-class SelecaoGonActivity : AppCompatActivity() {
+import kotlin.random.Random
+
+var player = 0
+class PlayerSelectedMaquina : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selecao_gon)
+        setContentView(R.layout.activity_player_selected_maquina)
 
         var selecionadoPlayer = findViewById<ImageView>(R.id.selected)
         val intent: Intent = getIntent() // pegando da area de transferencia
@@ -22,11 +23,11 @@ class SelecaoGonActivity : AppCompatActivity() {
         if (kill == "0") {
             selecionadoPlayer.setBackgroundResource(R.drawable.killselect)
             turno.setBackgroundResource(R.drawable.killselect)
-            jogador = 2
+            player = 2
         } else if (gon == "1"){
             selecionadoPlayer.setBackgroundResource(R.drawable.gonselect)
             turno.setBackgroundResource(R.drawable.gonselect)
-            jogador = 1
+            player = 1
         }
 
     }
@@ -66,38 +67,77 @@ class SelecaoGonActivity : AppCompatActivity() {
 
 
 
+
+
     fun playGame(cellId: Int, btnSelecionado: Button) {
 
         var turnoX = findViewById<ImageView>(R.id.jogador)
 
         contador++
-            if (playerActive == 1 && jogador == 1) {
-                btnSelecionado.background = getDrawable(R.drawable.gonselect)
-                gonPlayer.add(cellId)
-                turnoX.setBackgroundResource(R.drawable.killselect)
-                playerActive = 2
+        if (playerActive == 1 && player == 1) {
+            btnSelecionado.background = getDrawable(R.drawable.gonselect)
+            gonPlayer.add(cellId)
+            turnoX.setBackgroundResource(R.drawable.killselect)
+            playerActive = 2
+            jogoDaMaquina()
 
-            } else {
-                btnSelecionado.background = getDrawable(R.drawable.killselect)
-                killPlayer.add(cellId)
-                turnoX.setBackgroundResource(R.drawable.gonselect)
-                playerActive = 1
-                jogador = 1
-
-            }
+        }
+//        else {
+//            btnSelecionado.background = getDrawable(R.drawable.killselect)
+//            killPlayer.add(cellId)
+//            turnoX.setBackgroundResource(R.drawable.gonselect)
+//            playerActive = 1
+//            player = 1
+//
+//        }
 
 
 
         btnSelecionado.isEnabled = false
         checarVencedor()
 
-        }
+    }
 
+//    private fun sorteiaNum () {
+//
+//        var numeros = (1..9)
+//
+//        while (numeros.random() == numeros) {
+//
+//
+//        }
+//
+//
+//    }
+
+    private fun jogoDaMaquina() {
+
+        val numeroSorteado = (1..9).random()
+        lateinit var btnSelecionado: Button
+
+
+        when (numeroSorteado) {
+            1 -> btnSelecionado = findViewById(R.id.quadrado1)
+            2 -> btnSelecionado = findViewById(R.id.quadrado2)
+            3 -> btnSelecionado = findViewById(R.id.quadrado3)
+            4 -> btnSelecionado = findViewById(R.id.quadrado4)
+            5 -> btnSelecionado = findViewById(R.id.quadrado5)
+            6 -> btnSelecionado = findViewById(R.id.quadrado6)
+            7 -> btnSelecionado = findViewById(R.id.quadrado7)
+            8 -> btnSelecionado = findViewById(R.id.quadrado8)
+            9 -> btnSelecionado = findViewById(R.id.quadrado9)
+        }
+        btnSelecionado.background = getDrawable(R.drawable.killselect)
+        gonPlayer.add(numeroSorteado)
+//        turnoX.setBackgroundResource(R.drawable.killselect)
+        playerActive = 1
+        player = 1
+    }
 
 
     fun verificarPlayer(player: ArrayList<Int>): Boolean {
 
-           return player.contains(1) && player.contains(2) && player.contains(3) ||
+        return player.contains(1) && player.contains(2) && player.contains(3) ||
                 player.contains(4) && player.contains(5) && player.contains(6) ||
                 player.contains(7) && player.contains(8) && player.contains(9) ||
                 player.contains(1) && player.contains(4) && player.contains(7) ||
@@ -137,7 +177,4 @@ class SelecaoGonActivity : AppCompatActivity() {
         }
 
     }
-
 }
-
-
