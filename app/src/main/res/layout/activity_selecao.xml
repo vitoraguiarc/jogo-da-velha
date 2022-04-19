@@ -17,18 +17,10 @@
         android:gravity="center"
         android:text="Escolha seu personagem"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="75dp"/>
+        android:layout_marginBottom="150dp"/>
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background"
-        android:layout_marginBottom="55dp">
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"

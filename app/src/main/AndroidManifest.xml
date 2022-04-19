@@ -16,22 +16,10 @@
             android:name=".SelecaoXMaquina"
             android:exported="false" />
         <activity
-            android:name=".EmpateActivity"
-            android:exported="false" />
-        <activity
             android:name=".VitoriaGonActivity"
             android:exported="false" />
         <activity
-            android:name=".VitoriaKilluaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashVitoriaActivity"
-            android:exported="false" />
-        <activity
             android:name=".SelecaoGonActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SelecaoKilluaActivity"
             android:exported="false" />
         <activity
             android:name=".SelecaoActivity"
